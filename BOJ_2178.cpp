@@ -15,7 +15,7 @@ void bfs()
     check[0][0] = true;
     d[0][0] = 1;
     queue<pair<int, int> > que;
-    que.push({0, 0});
+    que.push(make_pair(0, 0));
     while (!que.empty())
     {
         int x = que.front().first;
@@ -29,7 +29,7 @@ void bfs()
             {
                 check[nx][ny] = true;
                 d[nx][ny] = d[x][y] + 1;
-                que.push({nx, ny});
+                que.push(make_pair(nx, ny));
             }
         }
     }
